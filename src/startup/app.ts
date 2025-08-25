@@ -18,7 +18,10 @@ export default (app: Application) => {
     app.use(helmet());
     app.use(logger('dev'));
     app.use(express.json());
-    app.use(cors());
+    app.use(cors({
+        origin: ["https://registration-chi-puce.vercel.app"],
+        credential: true
+    }));
     app.use(express.urlencoded({ extended: true }));
     app.use(cookieParser());
 
@@ -28,4 +31,5 @@ export default (app: Application) => {
     app.use(`/${SERVER_PREFIX}gift`, GiftRouter);
     
     app.use(errors);
+
 }
