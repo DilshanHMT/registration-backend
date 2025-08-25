@@ -15,10 +15,10 @@ export class Gift extends BaseEntity {
     @Column({ nullable: true })
     giftWinnerName: string;
 
-    @Column({ default: 0, type: "tinyint", nullable: true }) 
+    @Column({ default: 0, nullable: true }) 
     giftIsSelected: boolean;
 
-    @Column({ default: 0, type: "tinyint", nullable: true }) 
+    @Column({ default: 0, nullable: true }) 
     giftIsSpecial: boolean;
 
     @Column("integer", { nullable: true })
