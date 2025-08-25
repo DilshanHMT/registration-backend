@@ -8,9 +8,10 @@ const config: ConnectionOptions = {
   username: DatabaseConfig.user,
   password: DatabaseConfig.password,
   database: DatabaseConfig.database,
-  entities: [__dirname + '/src/entities/*.ts'], // Path to your entity files
+  entities: [__dirname + '/src/entities/*{.ts,.js}'], // Path to your entity files
   synchronize: true, // Set to false in production
 };
 
 export default config;
+
 
