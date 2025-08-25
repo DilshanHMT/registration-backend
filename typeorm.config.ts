@@ -2,7 +2,7 @@ import { ConnectionOptions } from 'typeorm';
 import { DatabaseConfig } from './src/config/database';
 
 const config: ConnectionOptions = {
-  type: 'mysql',
+  type: 'postgresql',
   host: DatabaseConfig.host,
   port: DatabaseConfig.port,
   username: DatabaseConfig.user,
@@ -13,5 +13,6 @@ const config: ConnectionOptions = {
 };
 
 export default config;
+
 
 
