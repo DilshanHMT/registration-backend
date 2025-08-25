@@ -18,7 +18,7 @@ export class User extends BaseEntity {
     @Column({ nullable: true, unique: true })
     userContact: string;
 
-    @Column({ default: 0, type: "tinyint", nullable: true }) 
+    @Column({ default: 0, nullable: true }) 
     userIsWinner: boolean;
 
     @CreateDateColumn({ type: "timestamp", default: () => "CURRENT_TIMESTAMP", nullable: true })
